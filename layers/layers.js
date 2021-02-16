@@ -73,7 +73,7 @@ var lyr_INDREAVELO_4 = new ol.layer.Vector({
                 declutter: true,
                 source:jsonSource_INDREAVELO_4, 
                 style: style_INDREAVELO_4,
-                interactive: true,
+                interactive: false,
     title: 'INDRE A VELO<br />\
     <img src="styles/legend/INDREAVELO_4_0.png" /> ANTENNE<br />\
     <img src="styles/legend/INDREAVELO_4_1.png" /> INDRE A VELO<br />'
@@ -89,7 +89,7 @@ var lyr_STJACQUESAVELO_5 = new ol.layer.Vector({
                 declutter: true,
                 source:jsonSource_STJACQUESAVELO_5, 
                 style: style_STJACQUESAVELO_5,
-                interactive: true,
+                interactive: false,
     title: 'ST JACQUES A VELO<br />\
     <img src="styles/legend/STJACQUESAVELO_5_0.png" /> ANTENNE<br />\
     <img src="styles/legend/STJACQUESAVELO_5_1.png" /> ST JACQUES A VELO<br />'
@@ -100,15 +100,12 @@ var features_STATIONNEMENTVELO_6 = format_STATIONNEMENTVELO_6.readFeatures(json_
 var jsonSource_STATIONNEMENTVELO_6 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_STATIONNEMENTVELO_6.addFeatures(features_STATIONNEMENTVELO_6);cluster_STATIONNEMENTVELO_6 = new ol.source.Cluster({
-  distance: 10,
-  source: jsonSource_STATIONNEMENTVELO_6
-});
+jsonSource_STATIONNEMENTVELO_6.addFeatures(features_STATIONNEMENTVELO_6);
 var lyr_STATIONNEMENTVELO_6 = new ol.layer.Vector({
                 declutter: true,
-                source:cluster_STATIONNEMENTVELO_6, 
+                source:jsonSource_STATIONNEMENTVELO_6, 
                 style: style_STATIONNEMENTVELO_6,
-                interactive: true,
+                interactive: false,
                 title: '<img src="styles/legend/STATIONNEMENTVELO_6.png" /> STATIONNEMENT VELO'
             });
 var format_SIGNALISATION_7 = new ol.format.GeoJSON();
@@ -146,7 +143,7 @@ lyr_COMMUNESTRAVERSEES_1.set('fieldLabels', {'NOM_COM': 'inline label', 'NOM_DEP
 lyr_EPCITRAVERSEES_2.set('fieldLabels', {'Nom_dept': 'inline label', 'Dept': 'inline label', 'Raison_soc': 'inline label', });
 lyr_BOUCLEDECYCLOTOURISMEn13_3.set('fieldLabels', {'ITINERAIRE': 'no label', 'COMMUNES': 'no label', 'REMARQUES': 'no label', 'LONGUEUR': 'no label', 'COMMENTAIR': 'no label', });
 lyr_INDREAVELO_4.set('fieldLabels', {'ITINERAIRE': 'inline label', 'COMMENTAIR': 'inline label', 'Long': 'inline label', });
-lyr_STJACQUESAVELO_5.set('fieldLabels', {'ITINERAIRE': 'inline label', 'LONGUEUR': 'inline label', 'COMMENTAIR': 'inline label', });
+lyr_STJACQUESAVELO_5.set('fieldLabels', {'ITINERAIRE': 'no label', 'LONGUEUR': 'inline label', 'COMMENTAIR': 'inline label', });
 lyr_STATIONNEMENTVELO_6.set('fieldLabels', {'IDENTIFIAN': 'inline label', 'ITINERAIRE': 'inline label', 'DEPARTEMEN': 'inline label', 'COMMUNAUTE': 'inline label', 'COMMUNE': 'inline label', 'LOCALISATI': 'inline label', 'NB D\'ARCEA': 'inline label', });
 lyr_SIGNALISATION_7.set('fieldLabels', {'IDENT': 'inline label', });
 lyr_SIGNALISATION_7.on('precompose', function(evt) {
