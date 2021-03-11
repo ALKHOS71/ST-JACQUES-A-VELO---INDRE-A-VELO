@@ -105,7 +105,7 @@ var lyr_STATIONNEMENTVELO_6 = new ol.layer.Vector({
                 declutter: true,
                 source:jsonSource_STATIONNEMENTVELO_6, 
                 style: style_STATIONNEMENTVELO_6,
-                interactive: false,
+                interactive: true,
                 title: '<img src="styles/legend/STATIONNEMENTVELO_6.png" /> STATIONNEMENT VELO'
             });
 var format_SIGNALISATION_7 = new ol.format.GeoJSON();
@@ -145,7 +145,7 @@ lyr_BOUCLEDECYCLOTOURISMEn13_3.set('fieldLabels', {'ITINERAIRE': 'no label', 'CO
 lyr_INDREAVELO_4.set('fieldLabels', {'ITINERAIRE': 'inline label', 'COMMENTAIR': 'inline label', 'Long': 'inline label', });
 lyr_STJACQUESAVELO_5.set('fieldLabels', {'ITINERAIRE': 'no label', 'LONGUEUR': 'inline label', 'COMMENTAIR': 'inline label', });
 lyr_STATIONNEMENTVELO_6.set('fieldLabels', {'IDENTIFIAN': 'inline label', 'ITINERAIRE': 'inline label', 'DEPARTEMEN': 'inline label', 'COMMUNAUTE': 'inline label', 'COMMUNE': 'inline label', 'LOCALISATI': 'inline label', 'NB D\'ARCEA': 'inline label', });
-lyr_SIGNALISATION_7.set('fieldLabels', {'IDENT': 'inline label', });
+lyr_SIGNALISATION_7.set('fieldLabels', {'IDENT': 'header label', });
 lyr_SIGNALISATION_7.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
